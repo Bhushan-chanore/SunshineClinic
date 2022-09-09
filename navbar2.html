@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-    UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+
+    <!-- ye link menu bar or close button  ke liye hai -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- css slider link -->
+    <link rel="stylesheet" href="slider.css" />
+
+    <!-- instagram icon -->
+    <link rel="stylesheet" href="footer.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+      :root {
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+        font-family: "Poppins", sans-serif;
+      }
+
+      html,
+      body {
+        position: relative;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        background: url("background1.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        /* position: relative; */
+        /* color: darkred; */
+      }
+
+      .maint h1{
+           color: #03008b;
+      }
+
+      .maint h1 p{
+           color: #03008b;
+      }
+      .container {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .navbar {
+        cursor: pointer;
+        display: flex;
+        background-color: rgb(58, 56, 56);
+        position: fixed;
+        width: 100%;
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
+      .close-btn {
+        display: none;
+      }
+
+      li {
+        list-style: none;
+        padding: 5px;
+        margin: 10px;
+        color: white;
+      }
+
+      ul li a {
+        cursor: pointer;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+      }
+
+      .maint {
+        padding: 150px 30px;
+        font-size: 3vw;
+      }
+
+      /* <!-- <==================================================================================>
+                                       ABOUT US
+    <===================================================================================> --> */
+
+      .about-us {
+        background: url("./background.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 70px 10px;
+        padding: 50px;
+        /* background-size: contain; */
+        color: black;
+        text-align: center;
+      }
+
+      .doctor {
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        
+      }
+
+      .form {
+        margin: 10px;
+        padding: 10px;
+        /* background-color: red; */
+        border: 5px solid black;
+        border-radius: 15px;
+      }
+
+      .form button {
+        margin: 10px;
+      }
+
+      .main img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .mainl {
+        font-size: 2vw;
+        border: 5px solid black;
+        border-radius: 15px;
+      }
+
+      .mainp {
+        font-size: 17px;
+      }
+
+      .buttonb {
+        /* margin: 65px;
+            padding: 10px; */
+        /* position: relative; */
+        /* top: 30px; */
+        /* left: 180px; */
+        border-width: 5px;
+        border-radius: 25px;
+        border-color: deepskyblue;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 50;
+        text-decoration: none;
+      }
+
+      .buttonb a {
+        text-align: center;
+        text-decoration: none;
+      }
+
+      /* <!-- <==================================================================================>
+                                    appointment
+    <===================================================================================> --> */
+
+
+      .form0 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 5px;
+
+        
+      }
+
+      .form1 {
+        /* background-color: red; */
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid black;
+        border-radius: 15px;
+      }
+
+      .form2{
+        font-size: 30px;
+      }
+      .user-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        /* align-items: center; */
+      }
+
+      .user-form input {
+        margin: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        box-shadow: 5px 5px 10px #000;
+        cursor: pointer;
+      }
+      .user-form button {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        background-color: #222;
+        color: whitesmoke;
+        float: right;
+        cursor: pointer;
+      }
+
+      .user-form button:hover {
+        color: white;
+        background-color: black;
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      /* <!-- <==================================================================================>
+                                                 GALLERY               
+    <===================================================================================> --> */
+
+      .swiper {
+        /* width: 100%;
+        height: 100%;
+        background-color:  #2874f0;
+        margin: 70px 0px;
+        padding: 20px; */
+
+        background: url("./background.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 70px 10px;
+        padding: 50px;
+        /* background-size: contain; */
+        color: black;
+        text-align: center;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        /* font-size: 18px; */
+
+        /* Center slide text vertically */
+        /* display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; */
+      }
+
+      .swiper-slide img {
+        display: flex;
+        width: 450px;
+        height: 350px;
+        object-fit: cover;
+        border: 15px solid rgb(15, 15, 15);
+        border-radius: 10px;
+      }
+
+      /* <!-- <==================================================================================>
+                                       contaact
+    <===================================================================================> --> */
+
+      .whole {
+        background-color: black;
+        color: white;
+        /* display: flex; */
+      }
+
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+        padding: 15px;
+      }
+
+      .rat {
+        margin: 20px;
+        padding: 5px;
+        font-size: 25px;
+      }
+
+      /* <!-- <==================================================================================>
+                                    FOR ANDROID
+    <===================================================================================> --> */
+
+      @media screen and (max-width: 400px) {
+        .navbar {
+          cursor: pointer;
+          transition: 0.3s all ease;
+        }
+
+        ul {
+          flex-direction: column;
+          transition: all 0.3s ease;
+        }
+
+        .menu-btn {
+          position: absolute;
+          top: 0px;
+          right: 5px;
+          padding: 5px;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          background-color: #222;
+          color: white;
+          display: none;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          padding: 5px;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+
+          display: block;
+          /* display: none; */
+        }
+
+        .maint {
+          padding: 250px 20px;
+          font-size: 6vw;
+        }
+
+        h1 {
+          font-size: 10vw;
+        }
+
+        /* aboutus */
+
+        .about-us {
+          padding: 50px 20px;
+          margin: 10px;
+        }
+
+        .mainl {
+          font-size: 6vw;
+        }
+
+        /* contact */
+        .foot {
+          /* display: inline-flex; */
+        }
+        /* appointment */
+        .form1 {
+          padding: 10px;
+        }
+        .form2 {
+          font-size: 6vw;
+        }
+
+        .form-control {
+          font-size: 15px;
+        }
+
+        .form3,
+        .form4,
+        .form5,
+        .form6,
+        .form7 {
+          padding: 10px;
+          /* font-size: 35px; */
+        }
+
+        /* menu button */
+        .fixed-btn {
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          width: 40px;
+        }
+
+        .but {
+          display: flex;
+          /* flex-direction: column; */
+          flex-wrap: wrap;
+        }
+        .user-form button:hover {
+          color: white;
+          background-color: black;
+          font-size: 20px;
+          font-style: italic;
+          cursor: pointer;
+        }
+
+        /* gallery */
+        .swiper {
+          /* width: 100%;
+        height: 100%;
+        background-color:  #2874f0;
+        margin: 70px 0px;
+        padding: 20px; */
+
+          background: url("./background.jpg");
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+          margin: 70px 10px;
+          padding: 50px;
+          /* background-size: contain; */
+          color: black;
+          text-align: center;
+        }
+
+        .swiper-slide img {
+          display: flex;
+          /* flex-direction: column; */
+          /* flex-wrap: wrap; */
+          justify-content: space-between;
+          width: 300px;
+          height: 250px;
+          object-fit: cover;
+          border: 15px solid rgb(15, 15, 15);
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <==================================================================================>
+                                       HOME PAGE
+    <===================================================================================> -->
+    <div class="container">
+      <div class="navbar">
+        <ul class="nav-links">
+          <li><a class="home-link" href="#home">HOME</a></li>
+          <li><a class="about-us-link" href="#about-us">ABOUT US</a></li>
+          <li><a class="appoitment-link" href="#appoitment">APPOINTMENT</a></li>
+          <li><a class="gallery-link" href="#gallery">GALLERY</a></li>
+          <li><a class="contact-link" href="#contact">CONTACT </a></li>
+        </ul>
+        <!-- <button id="btn" class="menu-btn"><span class="material-symbols-outlined">menu</span></button> -->
+      </div>
+      <button id="btn1" class="fixed-btn menu-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <button id="btn2" class="fixed-btn close-btn">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <div class="maint">
+      <h1>SUNSHINE CLINIC</h1>
+      <br />
+      <p>
+        Hii ! I am <b>Dr. BHUSHAN CHANORE</b>. <br />
+        I completed my <b>M.D.S</b> (Gum Specialist). <br />
+        Grand street dental is reimagining what the dental experince can be and
+        proudly setting a new standared for patient care .
+      </p>
+    </div>
+
+    <!-- <==================================================================================>
+                                       ABOUT US
+    <===================================================================================> -->
+
+    <div class="about-us">
+      <h1>ABOUT US :</h1>
+      <div class="doctor">
+        <div class="main">
+          <form action="">
+            <fieldset class="form">
+              <legend class="mainl">DR.BHUSHAN</legend>
+              <img class="photo" src="BHUSHAN.png" alt="" />
+              <p class="mainp">
+                <br />Dr. BHUSHAN CHANORE<br />
+                <b>" Speacialist - for Teeth cleaning "</b><br />
+                ABC Extreme makeover and CBS The Doctors<br />
+                Orpahy and Lary King
+              </p>
+              <button class="buttonb">
+                <a href="./bhushan.html">READ MORE</a>
+              </button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="main">
+          <form action="">
+            <fieldset class="form">
+              <legend class="mainl">Dr. Ashish</legend>
+              <img class="photo" src="Dr. Ashish Sabharwal.webp" alt="" />
+              <p class="mainp">
+                <br />Dr. Ashish Sabharwal <br />
+                <b>"Speacialist for Tooth Extractions"</b> <br />
+                ABC Extreme makeover and CBS The Doctors<br />
+                Orpahy and Lary King
+              </p>
+              <button class="buttonb">
+                <a href="https://www.lyfboat.com/doctor/1463-ashish-sabharwal/"
+                  >READ MORE</a
+                >
+              </button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="main">
+          <form action="">
+            <fieldset class="form">
+              <legend class="mainl">Dr. Sanjay</legend>
+              <img class="photo" src="Dr. Sanjay Sachdeva.webp" alt="" />
+              <p class="mainp">
+                <br />Dr. Sanjay Sachdeva<br />
+                <b>"Specialization - ROOT CANAL "</b> <br />
+                Qualification - MBBS, DCH, MS <br> 
+                Department - Ear Nose & Throat
+              </p>
+              <button class="buttonb">
+                <a href="https://www.lyfboat.com/doctor/1432-sanjay-sachdeva/"
+                  >READ MORE</a
+                >
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <==================================================================================>
+                                       APPOINTMENT
+    <===================================================================================> -->
+
+    <div class="appoitment">
+
+      <!-- <h1>APPOINTMENT FORM  :--</h1> -->
+      <form action="" class="form0">
+        <fieldset class="form1">
+          <legend class="form2"> <b> APPOINTMENT FORM </b></legend>
+
+          <div class="user-form">
+            <input type="text" placeholder="First name" class="form-control" />
+            <input type="text" placeholder="Last name" class="form-control" />
+
+            <input type="tel" placeholder="Phone number" class="form-control" />
+            <input type="email" placeholder="E-mail" class="form-control" />
+
+            <input type="date" placeholder="Enter Date" class="form-control" />
+            <input type="time" placeholder="Time" class="form-control" />
+
+            <input type="text" placeholder="Message" class="form-control" />
+
+            <select name="" id="" class="form-control">
+              <option selected>PURPOSE OF APPOINTMENT</option>
+              <option value="1">Teeth cleaning</option>
+              <option value="2">Tooth Extractions</option>
+              <option value="3">Root canal</option>
+              <option value="4">Wisdon Teeth Removal</option>
+            </select>
+
+            <div class="but">
+              <button class="form9" onclick="mybutton()">
+                BOOK APPOINTMENT
+              </button>
+              <button class="form9">CANCEL</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- <==================================================================================>
+                                       GALLERY
+    <===================================================================================> -->
+    <!-- Swiper -->
+    <div class="gallery">
+      
+      <div class="swiper mySwiper">
+        <h1>GALLERY :--</h1>
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide"><img src="gallery1.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery2.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery3.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery4.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery5.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery6.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery7.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery8.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="gallery9.jpg" alt="" /></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- <==================================================================================>
+                                       CONTACT US
+    <===================================================================================> -->
+
+    <footer>
+      <div class="whole">
+        <div class="foot">
+          <div class="time">
+            <h1>Office Hours</h1>
+            <br />
+            MON -- 9.00 am - 5.00 pm <br />
+            TUE -- 9.00 am - 5.00 pm <br />
+            WED -- 9.00 am - 5.00 pm <br />
+            THU -- 9.00 am - 5.00 pm <br />
+            FRI -- 9.00 am - 5.00 pm <br />
+          </div>
+
+          <div class="place">
+            <h1>Contact us</h1>
+            <br />
+            Place:-Nagraj Chowk Shantinagar Nagpur 440002 <br />
+            contact no:-9373952966 <br />
+            Email-Id :-- bhushanhelpfull@gmail.com
+          </div>
+
+          <div class="inst">
+            <h1>Instagram</h1>
+            <br />
+            You can follow us on instagram for more knowledge <br />
+            <br />
+            <br />
+            <div class="free">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/invites/contact/?i=11qg2glnwsgvv&utm_content=49ruom4"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="rat">
+          <p>
+            Copyright &copy; 2022 Dr.BHUSHAN CHANORE | SUNSHINE CLINIC | WEBSITE
+            DESINE : bhushan-chanore
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="opt.jss"></script> -->
+  </body>
+
+  <!-- <==================================================================================>
+                                JAVASCRIPT
+    <===================================================================================> -->
+  <!-- slider swiper js link -->
+  <!-- <script src="slider.js"></script> -->
+  <script src="slider.js"></script>
+  <script>
+    if (outerWidth > 400) {
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    } else {
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 60,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
+  </script>
+  <script>
+    // *------------------------------------------
+    // scrolling effect (ONE PAGE WEBSITE)
+    // -------------------------------------------*
+    const homesection = document.querySelector(".maint");
+    const aboutusSection = document.querySelector(".about-us");
+    const appoitmentsection = document.querySelector(".appoitment");
+    const gallerysection = document.querySelector(".gallery");
+    const contactsection = document.querySelector(".whole");
+
+    document.querySelector(".home-link").addEventListener("click", () => {
+      homesection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".about-us-link").addEventListener("click", () => {
+      aboutusSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".appoitment-link").addEventListener("click", () => {
+      appoitmentsection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".gallery-link").addEventListener("click", () => {
+      gallerysection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".contact-link").addEventListener("click", () => {
+      contactsection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // <!-- <==================================================================================>
+    //                                        MENU BAR AND CLOSE BAR
+    //     <===================================================================================> -->
+    btn1 = document.getElementById("btn1");
+    btn2 = document.getElementById("btn2");
+    ul = document.querySelector(".navbar");
+    height = ul.offsetHeight;
+
+    btn2.addEventListener("click", () => {
+      ul.style.display = "none";
+
+      btn2.style.display = "none";
+      btn1.style.display = "block";
+    });
+
+    btn1.addEventListener("click", () => {
+      ul.style.display = "block";
+
+      btn1.style.display = "none";
+      btn2.style.display = "block";
+    });
+
+    // <!-- <==================================================================================>
+    //                                        appointment button
+    //     <===================================================================================> -->
+
+    function mybutton() {
+      window.alert(
+        "YOUR APPOINTMENT REGISTERED SUCCESSFULLY !!! \n  WE WILL CONTACT WITH YOU THROUGH EMAIL IF THERE IS ANY PROBLEM.\n\n  THANKS FOR CHOOSING SUNSHINE FOR YOUR CHECKUP"
+      );
+    }
+  </script>
+</html>
